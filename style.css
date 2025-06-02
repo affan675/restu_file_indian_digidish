@@ -1,0 +1,369 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f3ed; /* A slightly warmer background */
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #7cd6d6; /* Deep brown for a rich feel */
+    color: #fff;
+    padding: 1.8em 0;
+    text-align: center;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);
+    border-bottom: 5px solid #ff9900; /* A touch of orange */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 3em;
+    font-family: 'Georgia', serif; /* More elegant font */
+    letter-spacing: 1px;
+}
+
+header p {
+    margin-top: 8px;
+    font-size: 1.2em;
+    font-style: italic;
+    color: #e0e0e0;
+}
+
+main {
+    padding: 25px;
+    max-width: 1280px; /* Slightly wider main content */
+    margin: 25px auto;
+    background-color: #fff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    border-radius: 12px;
+}
+
+section {
+    margin-bottom: 60px; /* More space between sections */
+}
+
+h2 {
+    color: #4a2c0c; /* Darker brown for headings */
+    border-bottom: 2px solid #ffcc66; /* Lighter orange accent */
+    padding-bottom: 15px;
+    margin-bottom: 40px;
+    font-size: 2.8em; /* Larger section titles */
+    text-align: center;
+    font-family: 'Georgia', serif;
+}
+
+h3 {
+    color: #3d250c;
+}
+
+/* Menu Section */
+#menu-items-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 35px; /* Increased gap */
+}
+
+.menu-item {
+    border: 1px solid #e0c2a8; /* Softer border */
+    padding: 18px; /* More padding */
+    border-radius: 12px;
+    background-color: #ffffff;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08); /* More subtle shadow */
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.menu-item:hover {
+    transform: translateY(-7px); /* More pronounced lift on hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.menu-item-image {
+    width: 100%;
+    height: 200px; /* Slightly taller images */
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 18px;
+    display: block;
+    filter: brightness(0.95); /* Slightly muted images */
+    transition: filter 0.3s ease;
+}
+
+.menu-item:hover .menu-item-image {
+    filter: brightness(1); /* Full brightness on hover */
+}
+
+.menu-item h3 {
+    margin-top: 0;
+    font-size: 1.6em; /* Larger item titles */
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.menu-item p {
+    font-size: 1.05em;
+    color: #666;
+    flex-grow: 1;
+    margin-bottom: 18px;
+}
+
+.menu-item .price {
+    font-weight: bold;
+    color: #e65100; /* Deep orange for price */
+    font-size: 1.5em; /* Larger price font */
+    margin-top: auto;
+    margin-bottom: 18px;
+}
+
+.menu-item button {
+    background-color: #ff9900; /* Orange button */
+    color: white;
+    border: none;
+    padding: 14px 22px; /* More padding */
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 1.2em; /* Larger button text */
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    width: 100%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.menu-item button:hover {
+    background-color: #e68a00; /* Darker orange on hover */
+    transform: translateY(-2px);
+}
+
+/* Order Cart Section */
+#order-cart {
+    background-color: #fcecdb; /* Lighter background for cart */
+    padding: 35px;
+    border-radius: 12px;
+    box-shadow: inset 0 0 15px rgba(255, 153, 0, 0.15);
+    border: 1px solid #ffcc99;
+}
+
+#cart-items {
+    border: 1px dashed #ffb366;
+    padding: 25px;
+    min-height: 150px;
+    border-radius: 10px;
+    background-color: #fff;
+    margin-bottom: 25px;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px solid #f0f0f0;
+    font-size: 1.2em;
+}
+
+.cart-item:last-child {
+    border-bottom: none;
+}
+
+.cart-item .item-details {
+    flex-grow: 1;
+    color: #333;
+}
+
+.cart-item .item-details p {
+    margin: 0;
+}
+
+.cart-item .item-quantity {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: bold;
+    color: #555;
+}
+
+.cart-item .item-quantity button {
+    background-color: #dc3545; /* Red for decrement */
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease;
+}
+
+.cart-item .item-quantity button:hover {
+    background-color: #c82333;
+}
+
+.cart-item .item-quantity button.add-more-to-cart {
+    background-color: #28a745; /* Green for increment */
+}
+
+.cart-item .item-quantity button.add-more-to-cart:hover {
+    background-color: #218838;
+}
+
+.cart-item .item-price {
+    font-weight: bold;
+    color: #e65100;
+    margin-left: 25px;
+    min-width: 80px;
+    text-align: right;
+}
+
+.cart-summary {
+    text-align: right;
+    margin-top: 25px;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #333;
+}
+
+.cart-summary p span {
+    color: #e65100;
+}
+
+#checkout-button {
+    background-color: #007bff; /* Blue for checkout */
+    color: white;
+    border: none;
+    padding: 18px 35px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1.4em;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    margin-top: 20px;
+    width: auto;
+    display: inline-block;
+}
+
+#checkout-button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+#checkout-button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* Reviews Section */
+#reviews {
+    background-color: #fefdfb; /* Very light background */
+    padding: 35px;
+    border-radius: 12px;
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.08);
+    border: 1px solid #f0e0d0;
+}
+
+#reviews h3 {
+    text-align: center;
+    margin-top: 35px;
+    font-size: 2.2em;
+    color: #4a2c0c;
+}
+
+#reviews-container {
+    margin-bottom: 35px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 25px;
+}
+
+.review-item {
+    border: 1px solid #f0e0d0;
+    padding: 22px;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
+}
+
+.review-item .reviewer-info {
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+    color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.review-item .rating {
+    color: #ffc107; /* Star yellow */
+    font-size: 1.3em;
+    letter-spacing: 2px;
+}
+
+.review-item p {
+    font-style: italic;
+    color: #555;
+    margin-bottom: 12px;
+    line-height: 1.7;
+}
+
+.review-item small {
+    display: block;
+    text-align: right;
+    color: #888;
+    font-size: 0.9em;
+}
+
+#review-form label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #555;
+    font-size: 1.1em;
+}
+
+#review-form input[type="text"],
+#review-form textarea,
+#review-form select {
+    width: calc(100% - 24px); /* Account for padding */
+    padding: 14px;
+    margin-bottom: 22px;
+    border: 1px solid #d0d0d0;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 1.1em;
+    color: #444;
+}
+
+#review-form textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+#review-form button[type="submit"] {
+    background-color: #6c757d; /* Gray for submit */
+    color: white;
+    border: none;
+    padding: 14px 28px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.2em;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    display: block;
+    margin: 0 auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#review-form button[type="submit"]:hover {
+    background-color: #5a6268;
+    transform: translateY(-2px);
+}
+
+footer {
+    text-align: center;
+    padding: 30px;
+    background-color: #3d250c; /* Matches header accent */
+    color: #ffe0b2; /* Light orange text for footer */
+    margin-top: 60px;
+    font-size: 1em;
+    box-shadow: 0 -3px 6px rgba(0, 0, 0, 0.2);
+}
